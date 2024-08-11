@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s; /* Smooth transition */
+        }
+        img {
+            width: 180px; /* Increased image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space below the image */
+        }
+        h1 {
+            font-weight: bold;
+            color: black; /* Black text color */
+            text-shadow: 1px 1px 0 white, -1px -1px 0 white, 
+                         1px -1px 0 white, -1px 1px 0 white; /* White stroke */
+            font-size: 4em; /* Increase text size */
+            margin-bottom: 5px; /* Closer to the line */
+        }
+        hr {
+            width: 80%; /* Line width */
+            height: 12px; /* Line height */
+            background-color: black; /* Line color */
+            border: none; /* Remove border */
+            border-radius: 6px; /* Rounded ends */
+            box-shadow: 0 0 0 2px white; /* Thicker white stroke */
+        }
+        footer {
+            position: absolute; /* Position at the bottom */
+            bottom: 20px; /* Space from the bottom */
+            color: #d3d3d3; /* Light gray color */
+            font-size: 0.8em; /* Smaller font size */
+            font-style: italic; /* Italicized text */
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.ibb.co/pZg8MV6/IMG-4138.png" alt="Test Image">
+    <h1>THIS IS A TEST</h1>
+    <hr>
+    <footer>
+        Made at 10:33 P.M. on 8/10/2024 using HTML, JavaScript, and CSS
+    </footer>
+
+    <script>
+        // Function to get a random shade between white and black
+        function getRandomShade() {
+            const shade = Math.floor(Math.random() * 256); // Random number between 0 and 255
+            return `rgb(${shade}, ${shade}, ${shade})`; // Return a grayscale color
+        }
+
+        // Set the background color on page load
+        document.body.style.backgroundColor = getRandomShade();
+    </script>
+</body>
+</html>
